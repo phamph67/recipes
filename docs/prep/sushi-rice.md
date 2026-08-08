@@ -1,4 +1,22 @@
+---
+title: Sushi Rice
+tags:
+  - japanese
+  - rice
+  - staple
+  - vegan
+yield: ~350 g seasoned rice (2 servings)
+time:
+  active: 15m
+  total: 45–60m
+---
+
 # Sushi Rice
+
+*Yield: ~350 g seasoned rice (2 servings) · Active 15 min · Total 45–60 min*
+
+**On the total time:** it swings with your cooking method — a rice cooker's soak and rest
+cycle runs longer than a stovetop pot.
 
 ## Ingredients
 

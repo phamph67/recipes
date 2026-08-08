@@ -1,6 +1,19 @@
+---
+title: Almond Cookies
+tags:
+  - chinese
+  - dessert
+  - baking
+  - cookies
+yield: 30–40 cookies
+time:
+  active: 30m
+  total: 2h30m
+---
+
 # Almond Cookies
 
-*Yield: 30–40 cookies*
+*Yield: 30–40 cookies · Active 30 min · Total 2½ h (includes chilling)*
 
 ---
 

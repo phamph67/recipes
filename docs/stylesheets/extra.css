@@ -1,0 +1,38 @@
+.recipe-pdf-link {
+  font-size: 0.75rem;
+}
+
+/* Chromium prints the built page, so strip the site chrome and leave the recipe.
+   Applies both to scripts/build_pdfs.py output and to a reader hitting Ctrl+P. */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-content__button,
+  .md-nav,
+  .md-search,
+  .recipe-pdf-link {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content,
+  .md-grid {
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .md-typeset table:not([class]) {
+    /* Keep ingredient tables from splitting across a page break mid-recipe. */
+    break-inside: avoid;
+  }
+
+  .md-typeset h1,
+  .md-typeset h2 {
+    break-after: avoid;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+}

@@ -1,0 +1,75 @@
+site_name: Recipes
+site_url: https://phamph67.github.io/recipes/
+repo_url: https://github.com/phamph67/recipes
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# No explicit `nav`: MkDocs builds the sidebar from the docs/ directory tree,
+# so adding a recipe file is the only step needed to get it into the nav.
+
+extra_css:
+  - stylesheets/extra.css
+
+hooks:
+  # Adds the per-recipe "Download PDF" link; PDFs come from scripts/build_pdfs.py
+  - scripts/pdf_link_hook.py
+
+plugins:
+  - search
+  # Listing is placed by the <!-- material/tags --> marker in docs/tags.md
+  # (the old `tags_file:` option is deprecated as of Material 9.7).
+  - tags
+  - print-site:
+      add_to_navigation: false
+      add_cover_page: true
+      add_print_site_banner: false
+      path_to_pdf: ""
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.caret
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/phamph67/recipes
