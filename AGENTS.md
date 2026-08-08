@@ -65,9 +65,12 @@ yield: 30–40 cookies
 time:
   active: 30m
   total: 2h30m
-source: Grandma's index card   # optional: where it came from
 ---
 ```
+
+There is no `source:` field. These are mostly the user's own family recipes, discovered or
+modified over time, and this is not a referenced cookbook — when a source is worth recording
+at all, write it as a line in **Notes** ("adapted from …", "grandma's version used lard").
 
 `title` drives the nav label; `tags` drive `docs/tags.md`. Note that Material's tags plugin
 only reads `tags:` — a cuisine recorded anywhere else will not produce a browse page, which
@@ -107,6 +110,25 @@ inline as a **bolded lead-in paragraph** near the relevant table — not in Note
   rename changes the published URL; there is no redirect plugin configured.
 - Existing Markdown files use **CRLF** line endings. `sed -i` patterns anchored with `$` will
   silently fail on them — use the editing tools rather than stream edits.
+
+## Recipes from published sources
+
+This book is practical, not literary. When a recipe comes from somewhere other than the
+user's own kitchen — a website, blog, cookbook scan, magazine clipping, video — take only the
+**ingredients and quantities, the procedure, and notes that change the outcome**. Drop the
+headnote, the personal story, the SEO padding, equipment plugs, ratings, and nutrition
+tables. Genuinely useful background may be rewritten in your own words and placed in Notes.
+
+Two reasons, pointing the same way: the user wants a working reference rather than a
+cookbook, and while ingredient lists and procedures are uncopyrightable statements of fact,
+the expressive prose around them is not — so reproduce facts, not phrasing.
+
+This does **not** apply to the user's own and family recipes, where the asides are the point
+(see the cultivar note in `docs/prep/sushi-rice.md`). If you cannot tell whose recipe it is,
+ask. Attribution, when worth recording, is a plain line in Notes: `Adapted from …`.
+
+Claude Code has this as the `recipe-extract` skill in `.claude/skills/`, with fuller detection
+signals and keep/drop lists; other tools should follow the summary above.
 
 ## Git rules
 
