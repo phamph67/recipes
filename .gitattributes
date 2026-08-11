@@ -1,0 +1,4 @@
+# Normalize Markdown to LF in the repository. Working copies were historically a
+# mix of CRLF and LF; this settles it once instead of deciding per generated file.
+# Existing files are only renormalized when they are next modified.
+*.md text eol=lf

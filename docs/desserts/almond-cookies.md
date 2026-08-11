@@ -1,10 +1,12 @@
 ---
 title: Almond Cookies
 tags:
-  - chinese
-  - dessert
-  - baking
-  - cookies
+  - cuisine/chinese
+  - technique/baking
+  - form/cookies
+  - main/almond
+  - profile/sweet
+  - effort/easy
 yield: 30–40 cookies
 time:
   active: 30m

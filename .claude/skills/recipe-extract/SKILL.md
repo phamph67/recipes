@@ -62,8 +62,17 @@ because of *how* it is written, that is the signal to rewrite or cut it.
 Then follow `AGENTS.md` for everything else: frontmatter with `title` and `tags`, the H1, the
 italic yield/time line, ingredient tables per component, numbered steps, `**Notes**` last.
 
-Attribution goes in **Notes** as a plain line — `Adapted from Serious Eats.` — not a
-frontmatter field. There is no `source:` key in this book.
+Attribution goes in the **first Notes bullet** — before technique or substitution notes — not
+in frontmatter. There is no `source:` key in this book. Two forms:
+
+- **Hyperlinked** for a web source:
+  `Adapted from [Serious Eats, "Sous Vide Steak"](https://…).`
+- **Bolded** when it cannot be linked — book, clipping, scan, person:
+  `Adapted from **Joy of Cooking**, 1997 edition.`
+
+Recipes in this book are **family or in-house by default**, so the presence of that bullet is
+what marks a recipe as someone else's. Never write a note saying a recipe *is* family or
+in-house — the absence of an attribution line already says it.
 
 ## The rule that overrides everything
 

@@ -1,10 +1,10 @@
 ---
 title: Sushi Rice
 tags:
-  - japanese
-  - rice
-  - staple
-  - vegan
+  - cuisine/japanese
+  - main/rice
+  - form/staple
+  - diet/vegan
 yield: ~350 g seasoned rice (2 servings)
 time:
   active: 15m

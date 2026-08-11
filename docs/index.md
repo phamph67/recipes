@@ -13,7 +13,6 @@ by weight where it matters, and the notes say which parts have latitude.
 
 <div class="grid cards" markdown>
 
-- :material-bread-slice: **[Baking](baking/index.md)** — breads, pastry, cookies
 - :material-egg-fried: **[Breakfast](breakfast/index.md)** — morning things
 - :material-cupcake: **[Desserts](desserts/index.md)** — sweets and puddings
 - :material-glass-cocktail: **[Drinks](drinks/index.md)** — hot, cold, and mixed
@@ -23,8 +22,11 @@ by weight where it matters, and the notes say which parts have latitude.
 
 </div>
 
-Or browse by **[tag](tags.md)** — cuisine, technique, and dietary tags cut across
-categories, so a recipe filed under Desserts can still be found under `baking` or
-`chinese`.
+Or browse by **[tag](tags.md)** — cuisine, technique, main ingredient, profile, and dietary
+tags cut across categories. Categories answer *when do you eat this?*, so there is no Baking
+section: almond cookies are a dessert, and `technique/baking` is the tag that finds them
+alongside everything else that goes in an oven.
+
+For the complete list, **[every recipe A–Z](recipes.md)** — nothing is reachable only by tag.
 
 Use the search box (top right) to search across every recipe at once.

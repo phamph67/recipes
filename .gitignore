@@ -2,3 +2,14 @@
 site/
 __pycache__/
 .DS_Store
+
+# Working notes for whoever picks the branch up next. Local only — it is scratch
+# for development, not part of the recipe book.
+handoff.md
+
+# Recipe ingestion staging (see AGENTS.md → Recipe ingestion).
+# The directory skeleton is committed; the contents never are. Sources under raw/
+# and processed/ are frequently other people's copyrighted material and this repo
+# is public, and markdown/ holds unreviewed proposals that are transient by design.
+input_recipes/*/*
+!input_recipes/*/.gitkeep

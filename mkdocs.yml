@@ -42,12 +42,118 @@ extra_css:
 hooks:
   # Adds the per-recipe "Download PDF" link; PDFs come from scripts/build_pdfs.py
   - scripts/pdf_link_hook.py
+  # Lists each category's recipes on its landing page, so the page is not a dead end
+  - scripts/category_index_hook.py
+  # Derives each recipe's course/ tag from its directory
+  - scripts/course_tag_hook.py
+  # Builds the A-Z listing on docs/recipes.md
+  - scripts/recipe_index_hook.py
 
 plugins:
   - search
   # Listing is placed by the <!-- material/tags --> marker in docs/tags.md
   # (the old `tags_file:` option is deprecated as of Material 9.7).
-  - tags
+  - tags:
+      tags_hierarchy: true
+      # The vocabulary is AGENTS.md -> "Tag vocabulary"; this list enforces it, so a typo or
+      # an invented tag fails the build instead of quietly creating a browse page of one.
+      # Add values with the `recipe-tag` skill, which updates both places together.
+      tags_allowed:
+        # course/ is injected from the directory by scripts/course_tag_hook.py
+        - course/breakfast
+        - course/desserts
+        - course/drinks
+        - course/mains
+        - course/prep
+        - course/sides
+        - cuisine/american
+        - cuisine/british
+        - cuisine/canadian
+        - cuisine/chinese
+        - cuisine/filipino
+        - cuisine/french
+        - cuisine/german
+        - cuisine/greek
+        - cuisine/indian
+        - cuisine/italian
+        - cuisine/japanese
+        - cuisine/korean
+        - cuisine/mexican
+        - cuisine/middle-eastern
+        - cuisine/spanish
+        - cuisine/thai
+        - cuisine/vietnamese
+        - technique/baking
+        - technique/boiling
+        - technique/braising
+        - technique/deep-frying
+        - technique/fermenting
+        - technique/frying
+        - technique/grilling
+        - technique/no-cook
+        - technique/pickling
+        - technique/roasting
+        - technique/sauteing
+        - technique/simmering
+        - technique/smoking
+        - technique/sous-vide
+        - technique/steaming
+        - technique/stir-frying
+        - main/almond
+        - main/beans
+        - main/beef
+        - main/cheese
+        - main/chicken
+        - main/chocolate
+        - main/duck
+        - main/egg
+        - main/fish
+        - main/fruit
+        - main/lamb
+        - main/noodles
+        - main/peanut
+        - main/pork
+        - main/potato
+        - main/rice
+        - main/sesame
+        - main/shellfish
+        - main/tofu
+        - main/vegetable
+        - main/walnut
+        - form/bread
+        - form/cake
+        - form/cookies
+        - form/dumplings
+        - form/pastry
+        - form/salad
+        - form/sauce
+        - form/soup
+        - form/staple
+        - form/stew
+        - profile/sweet
+        - profile/savoury
+        - profile/spicy
+        - profile/tangy
+        - profile/heaty
+        - profile/cooling
+        - diet/vegan
+        - diet/vegetarian
+        - diet/pescatarian
+        - diet/gluten-free
+        - diet/dairy-free
+        - diet/nut-free
+        - diet/egg-free
+        - diet/low-carb
+        - diet/halal
+        - diet/kosher
+        - season/spring
+        - season/summer
+        - season/autumn
+        - season/winter
+        # effort/ is assigned by the user only -- never by an agent
+        - effort/easy
+        - effort/medium
+        - effort/hard
   - print-site:
       add_to_navigation: false
       add_cover_page: true
